@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel ="stylesheet" type ="text/css" href ="{% static 'css/style.css' %}">
+		<title> 留言板 </title>
+		<meta charset ="UTF-8" />
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				
+		<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    </head>
+
+    <style>
+    	body{
+    		height:100%;
+    	}
+    	#id_wrapper{
+    		min-height: 100%;
+		    position: relative;
+		}
+		#id_footer {
+		    box-sizing: border-box;
+		    position: absolute;
+		    bottom: 0;
+		    width: 100%;
+		}
+    	th{
+    		width:20%;
+    	}
+    	td{
+    		width:80%;
+    	}
+    	
+    </style>
+
+    <body>
+    	<div class ="container">
+            <div class ="row">
+            	<div class ="col-md-6 col-md-offset-3 text-center">
+					<h1>留言板</h1>
+				</div>
+			</div>
+		</div>
+		<div class ="container-fluid" id="id_wrapper">
+            <div class ="row">
+				<ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#person">小紅</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">group<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a data-toggle="tab" href="#people1">小黑</a></li>
+                            <li><a data-toggle="tab" href="#people2">小白</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+	            <div id="person" class="tab-pane fade in active">
+	               	<table class="text1">
+		               	<tr>
+		               		<th>小紅:</th>
+		               		<td align="left">Hi</td>
+		                </tr>
+					</table>
+	            </div>
+	            <div id="people1" class="tab-pane fade">
+	                <table class="text2">
+		                <tr>
+		               		<th>小黑:</th>
+		               		<td align="left">Hello</td>
+		                </tr>
+					</table>
+	            </div>
+	            <div id="people2" class="tab-pane fade">
+	                <table class="text3">
+	                	<tr>
+		               		<th>小白:</th>
+		               		<td align="left">喵pass</td>
+		                </tr>
+					</table>
+	            </div>
+
+	            <div class="align-self-end">
+		            <div class ="col-md-2">
+					 	<input id ="name" type ="text" class ="form-control" required placeholder="暱稱:丁丁" disabled>
+	            	</div>
+					<div class ="col-md-8">
+					 	<input id ="chat" type ="text" class ="form-control" required autofocus placeholder="請輸入文字">
+	            	</div>
+	            	<button id ="check" type ="submit" class ="btn btn-warning">送出</button>
+	            </div>
+            </div>
+        </div>
+	</body>
+</html>
