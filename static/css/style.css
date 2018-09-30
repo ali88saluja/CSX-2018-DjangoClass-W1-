@@ -1,4 +1,19 @@
-.message {
-	border-style: solid;
-	border-width: medium;
+body{
+    height:100%;
+}
+#id_wrapper{
+    min-height: 100%;
+	position: relative;
+}
+#id_footer{
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+th{
+    width:20%;
+}
+td{
+    width:80%;
 }

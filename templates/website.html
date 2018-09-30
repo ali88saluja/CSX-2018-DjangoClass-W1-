@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-        <link rel ="stylesheet" type ="text/css" href ="style.css">
+        <link rel ="stylesheet" type ="text/css" href ="../static/css/style.css">
 		<title> 留言板 </title>
 		<meta charset ="UTF-8" />
 		<!-- Latest compiled and minified CSS -->
@@ -14,35 +14,30 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 				
 		<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
-    </head>
 
-    <style>
-    	body{
-    		height:100%;
-    	}
-    	#id_wrapper{
-    		min-height: 100%;
-		    position: relative;
-		}
-		#id_footer {
-		    box-sizing: border-box;
-		    position: absolute;
-		    bottom: 0;
-		    width: 100%;
-		}
-    	th{
-    		width:20%;
-    	}
-    	td{
-    		width:80%;
-    	}
-    	
-    </style>
+		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	</head>
 
     <body>
     	<div class ="container">
             <div class ="row">
-            	<div class ="col-md-6 col-md-offset-3 text-center">
+            	{% for img_url in imgs_url %}
+            		<img src="{{img_url}}" alt="QQ" width="24%" height="10%">
+            	{% endfor %}
+
+            	<div class="col-md-12">
+                    <div class="modal fade" id="mymodal" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="col-md-12" id="picture">
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+
+				<div class ="col-md-6 col-md-offset-3 text-center">
 					<h1>留言板</h1>
 				</div>
 			</div>
@@ -96,4 +91,25 @@
             </div>
         </div>
 	</body>
+
+	<script>
+		$("img").click(function(){
+           $("#kawai").html('<img class="img-responsive" src="'+$(this).attr('src')+'">');
+           $("#mymodal").modal('show');
+        });
+	</script>
+	<!--<script>
+		function shuffle(array){
+            for(var i=array.length-1;i>0;i--){
+                var j=Math.floor(Math.random()*(i+1));
+                var temp=array[i];
+                array[i]=array[j];
+                array[j]=temp;
+            }
+            return array;
+        }
+
+       	var imgs=[{% for img_url in imgs_url %}"{{img_url}}",{% endfor %}];
+       	shuffle(imgs);
+	</script>-->
 </html>
