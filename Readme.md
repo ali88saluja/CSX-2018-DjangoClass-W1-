@@ -12,7 +12,10 @@
 
 ## Week3
 1.利用for loop把重複的東西簡化
-2.
+
+2.學習基礎python
+
+3.透過view和template互相連結
 
 
 以下是我的heroku網站連結：https://alibabasaluja.herokuapp.com/
