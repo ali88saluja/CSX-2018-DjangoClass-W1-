@@ -10,6 +10,12 @@
 
 3.學習html&css並建立基本的對話框架構
 
+## Week3
+1.利用for loop把重複的東西簡化
+
+2.
+
+
 以下是我的heroku網站連結：https://alibabasaluja.herokuapp.com/
 
 ---
