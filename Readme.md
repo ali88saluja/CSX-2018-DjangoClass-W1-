@@ -13,7 +13,7 @@
 ## Week3
 1.利用for loop把重複的東西簡化
 
-2.學習基礎python
+2.學習基礎python和js
 
 3.透過view和template互相連結
 
