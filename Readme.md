@@ -17,6 +17,9 @@
 
 3.透過view和template互相連結
 
+## Week4
+1.不斷的嘗試讓資料庫連結到heroku
+
 
 以下是我的heroku網站連結：https://alibabasaluja.herokuapp.com/
 
