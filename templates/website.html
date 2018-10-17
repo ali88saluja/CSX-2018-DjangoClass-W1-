@@ -23,87 +23,42 @@
     <body>
     	<div class ="container">
             <div class ="row">
-            	{% for img_url in imgs_url %}
-            		<img src="{{img_url}}" alt="QQ" width="24%" height="10%">
-            	{% endfor %}
-
-            	<div class="col-md-12">
-                    <div class="modal fade" id="mymodal" role="dialog">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="col-md-12" id="picture">
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-
-				<div class ="col-md-6 col-md-offset-3 text-center">
+           		<div class ="col-md-6 col-md-offset-3 text-center">
 					<h1>留言板</h1>
 				</div>
-				{% for msg in messages %}
-                	<div class='msg'>
-                    	<span class="name">{{msg.send}}</span> :{{msg.message}}
-                	</div>
-           	 	{% endfor %}
-			</div>
+		    </div>
 		</div>
-		<div class ="container-fluid" id="id_wrapper">
+		
+		<div class ="container">
             <div class ="row">
-				<ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#person">小紅</a></li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">group<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a data-toggle="tab" href="#people1">小黑</a></li>
-                            <li><a data-toggle="tab" href="#people2">小白</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                
-	            <div id="person" class="tab-pane fade in active">
-	               	<table class="text1">
-		               	<tr>
-		               		<th>小紅:</th>
-		               		<td align="left">Hi</td>
-		                </tr>
-					</table>
-	            </div>
-	            <div id="people1" class="tab-pane fade">
-	                <table class="text2">
-		                <tr>
-		               		<th>小黑:</th>
-		               		<td align="left">Hello</td>
-		                </tr>
-					</table>
-	            </div>
-	            <div id="people2" class="tab-pane fade">
-	                <table class="text3">
-	                	<tr>
-		               		<th>小白:</th>
-		               		<td align="left">喵pass</td>
-		                </tr>
-					</table>
-	            </div>
+				<div class="col-md-6 col-md-offset-3">
+				    {% for msg in msgs %}
+				        <div class="msg">
+				            <span class="name">{{msg.send}}:</span> {{msg.message}}
+				        </div>
+				    {% endfor %}
+				</div> 
+			</div>
+		</div>   
+						
 
-	            <div class="align-self-end">
-		            <div class ="col-md-2">
-					 	<input id ="name" type ="text" class ="form-control" required placeholder="暱稱:丁丁" disabled>
-	            	</div>
+
+
+		<div class ="container">
+            <div class ="row">
+				<form action="" method="post">
+			        <div class ="col-md-2">
+						<input id ="name" type ="text" class ="form-control" required autofocus placeholder="你誰啊">
+		            </div>
 					<div class ="col-md-8">
-					 	<input id ="chat" type ="text" class ="form-control" required autofocus placeholder="請輸入文字">
-	            	</div>
-	            	<button id ="check" type ="submit" class ="btn btn-warning">送出</button>
-	            </div>
-            </div>
+						<input id ="message" type ="text" class ="form-control" required placeholder="說話啊">
+		            </div>
+		            <input type="submit" id="submit" value="送出">
+	            </form>
+	        </div>
         </div>
 	</body>
 
-	<script>
-		$("img").click(function(){
-           $("#picture").html('<img class="img-responsive" src="'+$(this).attr('src')+'">');
-           $("#mymodal").modal('show');
-        });
-	</script>
 	<!--<script>
 		function shuffle(array){
             for(var i=array.length-1;i>0;i--){

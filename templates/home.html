@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+	<head>
+        <link rel ="stylesheet" type ="text/css" href ="{% static 'css/style.css' %}">
+		<title> 留言板 </title>
+		<meta charset ="UTF-8" />
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		
+		<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+	</head>
+ 	
+ 	<body>
+    	<div class ="container">
+            <div class ="row">
+            	<a href="website.html">點此進入留言板</a>
+            	<br>
+            	{% for img_url in imgs_url %}
+            		<img src="{{img_url}}" alt="QQ" width="24%" height="10%">
+            	{% endfor %}
+
+            	<div class="col-md-12">
+                    <div class="modal fade" id="mymodal" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="col-md-12" id="picture">
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+		$("img").click(function(){
+           $("#picture").html('<img class="img-responsive" src="'+$(this).attr('src')+'">');
+           $("#mymodal").modal('show');
+        });
+	</script>
+</html>
