@@ -20,6 +20,11 @@
 ## Week4
 1.不斷的嘗試讓資料庫連結到heroku
 
+## Week5
+1.若想同步本機和heroku的資料庫可以利用export和inport的方法
+
+2.利用資料庫和網頁進行互動
+
 
 以下是我的heroku網站連結：https://alibabasaluja.herokuapp.com/
 
