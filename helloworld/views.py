@@ -16,7 +16,7 @@ def messages(request):
 	if 'name' in request.POST:
 		talker = request.POST.get('name',False)
 		messages = request.POST.get('message',False)
-		msg = message.objects.create(send = talker , message = messages)
+		message.objects.create(send = talker , message = messages)
 		msgs = message.objects.all()
 		return render(request, 'website.html', locals())
 	else:
