@@ -13,10 +13,12 @@ def index(request):
 	return render(request, 'home.html', locals())
 
 def messages(request):
+	import datetime
 	if 'name' in request.POST:
 		talker = request.POST.get('name',False)
 		messages = request.POST.get('message',False)
-		message.objects.create(send = talker , message = messages)
+		date_time = datetime.datetime.now()
+		message.objects.create(send = talker , message = messages , time = date_time) 
 		msgs = message.objects.all()
 		return render(request, 'website.html', locals())
 	else:
