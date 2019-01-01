@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 重修 </title>
+		<meta charset ="UTF-8"/>
+         <!-- Latest compiled and minified JavaScript -->
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/bootstrap.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		
+		<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+	<body>
+        <nav class="nav navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Sound</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="nav">
+                        <ul class="nav navbar-nav">
+                            <li><a href ="index~~.html">首頁</a></li>
+                            <li><a href ="ruden.html">加法計算器</a></li>
+                            <li><a href ="sexy.html">猜數字</a></li>
+                            <li><a href ="InInDer.html">記憶遊戲</a></li>
+                            <li><a href ="motto.html">調分</a></li>
+                            <li><a href ="kilihime.html">放大圖片</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        <div class ="container">
+            <div class="row">
+                <table class ="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>名</th>
+                            <th>國</th>
+                            <th>數</th>
+                            <th>英</th>
+                            <th>均</th>
+                            <th>學弟</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr std_id="0">
+                            <td>小王</td>
+                            <td name ="chinese">32</td>
+                            <td name ="math">49</td>
+                            <td name ="english">38</td>
+                            <td name ="average"></td>
+                            <td name ="pass"></td>
+                        </tr>
+                        <tr std_id="1">
+                            <td>八蛋</td>
+                            <td name ="chinese">83</td>
+                            <td name ="math">96</td>
+                            <td name ="english">90</td>
+                            <td name ="average"></td>
+                            <td name ="pass"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class ="text-center">
+                    <button id ="click" class ="btn btn-info" onmouseover ='qoo("click",2)' onmouseout ='qoo("click",3)' onclick ='owo()'>大風吹</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <script>
+         function qoo(button,n){
+            var a =document.getElementById(button);
+            if(n==2){
+				a.style.border ="5px solid #FF0000";
+            }
+			else if(n==3){
+				a.style.border ="5px #FFFFFF";
+            }
+        }
+        
+        $("button").click(function(){
+                for(var i=0;i<=1;i++){
+                    var tr=$("table").find('tr[std_id='+i+']');
+                    var score=Number(tr.find('td[name="chinese"]').html());
+                    var score2=Math.sqrt(score)*10;
+                    tr.find('td[name="chinese"]').html(Math.floor(score2));
+                    
+                    var grade=Number(tr.find('td[name="chinese"]').html())+Number(tr.find('td[name="math"]').html())+Number(tr.find('td[name="english"]').html());
+                    tr.find('td[name="average"]').html(Math.floor(grade/3));
+                    
+                    if(Number(tr.find('td[name="average"]').html())<60){
+                    tr.find('td[name="pass"]').html("你好");
+                    }
+                    else{
+                        tr.find('td[name="pass"]').html("很好");
+                    }			
+                }
+        });
+    </script>
+</html>

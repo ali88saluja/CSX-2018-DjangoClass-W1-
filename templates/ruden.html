@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 星爆氣流斬 </title>
+		<meta charset ="UTF-8"/>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		
+		<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<nav class="nav navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Sound</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="nav">
+                        <ul class="nav navbar-nav">
+                            <li><a href ="index~~.html">首頁</a></li>
+                            <li><a href ="ruden.html">加法計算器</a></li>
+                            <li><a href ="sexy.html">猜數字</a></li>
+                            <li><a href ="InInDer.html">記憶遊戲</a></li>
+                            <li><a href ="motto.html">調分</a></li>
+                            <li><a href ="kilihime.html">放大圖片</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+		<div class ="container">
+			<div class ="row">
+				 <div class ="col-md-4 col-md-offset-4 text-center">
+				 	<h1>請輸入兩個數字</h1>
+				 	<input id ="num1" type ="number" class ="form-control" required>
+				 	<input id ="num2" type ="number" class ="form-control" required>
+				 	<h2 id ="output"></h2>
+				 	<button id ="check" class ="btn btn-warning" onmouseover ='qoo("check",0)' onmouseout ='qoo("check",1)' onclick ='qoo("check",2)'>確定</button>
+				 </div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		function qoo(button,n){
+			var a =document.getElementById(button);
+			if(n==0){
+				a.style.border ="5px solid #FF0000";
+            }
+			else if(n==1){
+				a.style.border ="5px #FFFFFF";
+            }
+			else{
+				var num1 =document.getElementById("num1").value;
+				var num2 =document.getElementById("num2").value;
+				var output =document.getElementById("output");
+				num1 =parseInt(num1,10);
+				num2 =parseInt(num2,10);
+				output.innerHTML =num1+num2;
+            }
+        }
+    </script>
+</html>

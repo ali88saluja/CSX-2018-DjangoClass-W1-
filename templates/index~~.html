@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/bootstrap.min.js"></script>
+		<link rel ="stylesheet" type ="text/css" href ="style.css">
+		<title> 我是魯粉我驕傲 </title>
+		<meta charset ="UTF-8" />
+		
+        <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+	</head>
+	
+	<body>
+        <audio autoplay>
+            <source src="seno.mp3" type="audio/mpeg">
+        </audio>
+        
+        <nav class="nav navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Sound</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="nav">
+                        <ul class="nav navbar-nav">
+                            <li><a href ="index~~.html">首頁</a></li>
+                            <li><a href ="ruden.html">加法計算器</a></li>
+                            <li><a href ="sexy.html">猜數字</a></li>
+                            <li><a href ="InInDer.html">記憶遊戲</a></li>
+                            <li><a href ="motto.html">調分</a></li>
+                            <li><a href ="kilihime.html">放大圖片</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        
+		<div class ="container">
+            <div class ="row">
+				<ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#text">Text</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Picture<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a data-toggle="tab" href="#picture1">ruden 1</a></li>
+                            <li><a data-toggle="tab" href="#picture2">ruden 2</a></li>
+                        </ul>
+                    </li>
+                </ul>              
+                <div class="tab-content col-md-12">
+                    <div id="text" class="tab-pane fade in active">
+                        <div class ="title col-md-12 text-right">
+                            <h1>Greenland’s coolest jobs</h1>
+                        <div class ="subtitle col-md-12 text-right text-muted">
+                            Their traditional way of life is under threat – meet the entrepreneurial Greenlanders adapting their day jobs.
+                        </div>
+                        <div class ="content col-md-12 text-success">
+                            <p>With its blue glaciers and stark, snowy, landscapes that stretch beyond the horizon, Greenland is the one of the few places on earth where Instagram filters are utterly     redundant.
+                            <p>Stunningly beautiful yet also one of the harshest climates imaginable,Greenlanders need to adapt to work and survive here. It’s both the
+                                world’s biggest island (excluding Australia) and the 12th biggest country. Yet the population of 56,000 is similar to a small city.
+                        </div>           
+                        </div>
+                    </div>
+                        <div id="picture1" class="tab-pane fade">
+                            <div class="col-md-6 col-md-offset-3">
+                                <img id="monkey" class="col-md-12 img-responsive" onclick='test("monkey",0)' onmouseover='test("monkey",1)' onmouseout='test("monkey",2)' src="ruden1.jpg" alt="king">
+                            </div>
+                        </div>
+                    <div id="picture2" class="tab-pane fade">
+                        <div class="col-md-6 col-md-offset-3">
+                            <img id="sir-ding" class="col-md-12 img-responsive" onclick='test("sir-ding",3)' onmouseover='test("sir-ding",1)' onmouseout='test("sir-ding",2)' src="ruden2.jpg" alt="hshs">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+	<script>
+		function test(img,n){
+			var a =document.getElementById(img);
+			if(n==0){
+				document.write("王者降臨");
+			}
+			else if(n==1){
+				a.style.border ="5px solid #0000FF";
+			}
+			else if(n==2){
+				a.style.border ="5px solid #FFFFFF";
+			}
+			else{
+				document.write("魯王萬歲");
+			}
+		}
+	</script>
+</html>
+        
+        
+        
+        
+        
+                    

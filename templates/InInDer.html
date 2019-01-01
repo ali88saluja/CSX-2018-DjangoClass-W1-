@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 小雞雞 </title>
+        <link rel ="stylesheet" type ="text/css" href ="c8763.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+		<meta charset ="UTF-8"/>
+        
+        <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</head>
+	<body>
+        <nav class="nav navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Sound</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="nav">
+                        <ul class="nav navbar-nav">
+                            <li><a href ="index~~.html">首頁</a></li>
+                            <li><a href ="ruden.html">加法計算器</a></li>
+                            <li><a href ="sexy.html">猜數字</a></li>
+                            <li><a href ="InInDer.html">記憶遊戲</a></li>
+                            <li><a href ="motto.html">調分</a></li>
+                            <li><a href ="kilihime.html">放大圖片</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        <div class="container">
+            <div class="row">   
+                <button class="btn btn-danger" data-toggle="modal" data-target="#explanation">說明</button>
+              
+                <div id="chicken">
+                </div>
+            
+                <div class="col-md-12 text-center">
+                    <div class="modal fade" id="mymodal" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title">說明</h1>
+                                </div>
+                                <div class="modal-body">
+                                    <p>隨意點擊兩張圖片.顯示出龍貓後面的小雞.找到相同兩張即為正解.兩張圖片若不同請耐心等待一下再繼續進行遊戲.切勿一次點三張以上.太快太多他會有BUG QQ</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class ="text-center">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">確認</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+
+                <div>
+                     <div class="col-md-12 text-center">
+                        <div class="modal fade" id="explanation" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title">說明</h1>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>隨意點擊兩張圖片.顯示出龍貓後面的小雞.找到相同兩張即為正解.兩張圖片若不同請耐心等待一下再繼續進行遊戲.切勿一次點三張以上.太快太多他會有BUG QQ</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class ="text-center">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">確認</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+			
+		   
+          
+        
+    </body>
+
+	<script>
+        $("#mymodal").modal('show');
+        
+        
+        click=0;
+         
+		function shuffle(array){
+            for(var i=array.length-1;i>0;i--){
+                var j=Math.floor(Math.random()*(i+1));
+                var temp=array[i];
+                array[i]=array[j];
+                array[j]=temp;
+            }
+            return array;
+        }
+        var chicken=["chicken1.jpg","chicken2.jpg","chicken3.jpg","chicken4.jpg","chicken5.jpg","chicken6.jpg","chicken7.jpg","chicken8.jpg","chicken9.jpg","chicken10.jpg","chicken11.jpg","chicken12.jpg","chicken1.jpg","chicken2.jpg","chicken3.jpg","chicken4.jpg","chicken5.jpg","chicken6.jpg","chicken7.jpg","chicken8.jpg","chicken9.jpg","chicken10.jpg","chicken11.jpg","chicken12.jpg"];
+        shuffle(chicken);
+        
+        for(n in chicken){
+			$("#chicken").append('<div class="col-md-3 card_set"> <img id="'+n+'" class="img-responsive card_back" src="龍貓貓.jpg"> <img class="img-responsive card" src="'+chicken[n]+'"> </div>');
+		}
+        
+        $(".card_back").mouseover(function(){
+            $(this).css("border","3px solid #FF00FF");
+        });
+        $(".card_back").mouseout(function(){
+            $(this).css("border","3px solid #FFFFFF");
+        });
+        
+        $(".card_back").click(function(){
+            click++;
+            $(this).addClass("hide");
+            if(click%2==0){
+                setTimeout(result,870);
+            }
+        });
+        
+        function result(){
+            var id1=$('.hide')[0].id;
+            var id2=$('.hide')[1].id;
+            if(chicken[id1]==chicken[id2]){
+                $('.hide').addClass("correct");
+                $('.hide').removeClass("hide");
+            }
+            else{
+                $('.hide').removeClass("hide");
+            }
+        }
+    </script>
+</html>
+

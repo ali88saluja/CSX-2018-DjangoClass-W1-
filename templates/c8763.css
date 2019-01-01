@@ -1,0 +1,19 @@
+.card_set{
+    position:relative;
+    margin-top:35px;
+}
+.card_back{
+    border:3px solid #FFFFFF;
+    z-index:3;
+    position:absolute;
+}
+.card{
+    border:3px solid #FFFFFF;
+    z-index:1;
+}
+.hide{
+    visibility:hidden;
+}
+.correct{
+    visibility:hidden;
+}

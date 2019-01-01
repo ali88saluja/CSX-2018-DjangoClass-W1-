@@ -1,0 +1,23 @@
+.title{
+	font-size:30px;
+    color:#ff0000;
+}
+.subtitle{
+	font-size:24px;
+}
+.content{
+	font-size:18px;
+}
+*{
+	font-family: 'Oswald', sans-serif;
+}
+.navbar-collapse {
+    background-color:#f4ff9e;
+}
+.navbar-default .navbar-brand {
+    color:#ce1bdd;
+}
+.navbar-default .navbar-nav > li > a:hover{
+    color:#ff3f3f;
+}
+
