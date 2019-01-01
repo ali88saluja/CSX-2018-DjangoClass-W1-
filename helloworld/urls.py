@@ -21,7 +21,6 @@ from login import views as lviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('website.html/', views.messages),
     path('', views.index),
     path('ruden.html/', views.ruden),
     path('sexy.html/', views.sexy),
