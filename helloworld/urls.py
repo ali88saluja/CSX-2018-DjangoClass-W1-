@@ -22,10 +22,12 @@ from login import views as lviews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('website.html/', views.messages),
-    path('website.html/', lviews.login),
     path('', views.index),
-    path('logout/', lviews.logout),
-    path('login.html/', lviews.login)
+    path('ruden.html/', views.messages),
+    path('sexy.html/', views.messages),
+    path('InInDer.html/', views.messages),
+    path('motto.html/', views.messages),
+    path('kilihime.html/', views.messages),
 ]
 
 
