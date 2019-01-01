@@ -23,11 +23,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('website.html/', views.messages),
     path('', views.index),
-    path('ruden.html/', views.messages),
-    path('sexy.html/', views.messages),
-    path('InInDer.html/', views.messages),
-    path('motto.html/', views.messages),
-    path('kilihime.html/', views.messages),
+    path('ruden.html/', views.ruden),
+    path('sexy.html/', views.sexy),
+    path('InInDer.html/', views.InInDer),
+    path('motto.html/', views.motto),
+    path('kilihime.html/', views.kilihime),
 ]
 
 
