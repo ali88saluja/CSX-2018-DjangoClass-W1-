@@ -9,6 +9,9 @@ from ali88test.models import message
 def index(request):
 	return render(request, 'home.html', locals())
 
+def home(request):
+	return render(request, 'home.html', locals())
+
 def ruden(request):
 	return render(request, 'ruden.html', locals())
 

@@ -114,7 +114,9 @@
             }
             return array;
         }
-        var chicken=["chicken1.jpg","chicken2.jpg","chicken3.jpg","chicken4.jpg","chicken5.jpg","chicken6.jpg","chicken7.jpg","chicken8.jpg","chicken9.jpg","chicken10.jpg","chicken11.jpg","chicken12.jpg","chicken1.jpg","chicken2.jpg","chicken3.jpg","chicken4.jpg","chicken5.jpg","chicken6.jpg","chicken7.jpg","chicken8.jpg","chicken9.jpg","chicken10.jpg","chicken11.jpg","chicken12.jpg"];
+        var chicken=[{% for img_url in imgs_url %}
+                    "{{img_url}}"
+                    {% endfor %}];
         shuffle(chicken);
         
         for(n in chicken){
