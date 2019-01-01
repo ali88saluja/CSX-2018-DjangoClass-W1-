@@ -20,8 +20,8 @@ def sexy(request):
 
 def InInDer(request):
 	import random
-	imgs_url= ['../static/img/chicken1.jpg' , '../static/img/chicken2.jpg' , '../static/img/chicken3.jpg' , '../static/img/chicken4.jpg' , '../static/img/chicken5.jpg' , '../static/img/chicken6.jpg' , '../static/img/chicken7.jpg' , '../static/img/chicken8.jpg' , '../static/img/chicken9.jpg' , '../static/img/chicken10.jpg' , '../static/img/chicken11.jpg' , '../static/img/chicken12.jpg','../static/img/chicken1.jpg' , '../static/img/chicken2.jpg' , '../static/img/chicken3.jpg' , '../static/img/chicken4.jpg' , '../static/img/chicken5.jpg' , '../static/img/chicken6.jpg' , '../static/img/chicken7.jpg' , '../static/img/chicken8.jpg' , '../static/img/chicken9.jpg' , '../static/img/chicken10.jpg' , '../static/img/chicken11.jpg' , '../static/img/chicken12.jpg']
-	random.shuffle(imgs_url)
+	images_url= ['../static/img/chicken1.jpg' , '../static/img/chicken2.jpg' , '../static/img/chicken3.jpg' , '../static/img/chicken4.jpg' , '../static/img/chicken5.jpg' , '../static/img/chicken6.jpg' , '../static/img/chicken7.jpg' , '../static/img/chicken8.jpg' , '../static/img/chicken9.jpg' , '../static/img/chicken10.jpg' , '../static/img/chicken11.jpg' , '../static/img/chicken12.jpg','../static/img/chicken1.jpg' , '../static/img/chicken2.jpg' , '../static/img/chicken3.jpg' , '../static/img/chicken4.jpg' , '../static/img/chicken5.jpg' , '../static/img/chicken6.jpg' , '../static/img/chicken7.jpg' , '../static/img/chicken8.jpg' , '../static/img/chicken9.jpg' , '../static/img/chicken10.jpg' , '../static/img/chicken11.jpg' , '../static/img/chicken12.jpg']
+	random.shuffle(images_url)
 	return render(request, 'InInDer.html', locals())
 
 def motto(request):

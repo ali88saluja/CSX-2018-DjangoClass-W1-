@@ -114,8 +114,8 @@
             }
             return array;
         }
-        var chicken=[{% for img_url in imgs_url %}
-                    "{{img_url}}"
+        var chicken=[{% for image_url in images_url %}
+                    "{{image_url}}"
                     {% endfor %}];
         shuffle(chicken);
         
