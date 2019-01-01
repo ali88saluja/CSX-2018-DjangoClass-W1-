@@ -62,10 +62,10 @@
     </body>
     
     <script>
-        var cute=[
+        var cute=
             {% for img_url in imgs_url %}
                     "{{img_url}}"
-                {% endfor %}];
+                {% endfor %};
         for(n in cute){
             $("#cute").append('<div class="col-md-4"> <img class="img-responsive cute" src="'+cute[n]+'"> </div>')
         }
